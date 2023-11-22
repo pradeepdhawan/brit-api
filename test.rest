@@ -1,0 +1,39 @@
+POST http://127.0.0.1:8000/signup 
+Content-Type: application/json
+
+{ "username": "pradeep", "password": "Pass1234!", "email": "pradeep@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/login 
+Content-Type: application/json
+
+{ "username": "pradeep", "password": "Pass1234!" }
+
+
+###
+
+GET http://127.0.0.1:8000/validate_token 
+Content-Type: application/json
+Authorization: token 8eb483d9d1c1d5ba4e55f1be90414877aaf2adf5
+
+###
+
+GET http://127.0.0.1:8000/items 
+Content-Type: application/json
+Authorization: token 8eb483d9d1c1d5ba4e55f1be90414877aaf2adf5
+
+###
+
+POST http://127.0.0.1:8000/add
+Authorization: token 8eb483d9d1c1d5ba4e55f1be90414877aaf2adf5
+Content-Type: application/json
+
+
+{ "name": "Mango", "price": 23.98 }
+
+###
+
+GET http://127.0.0.1:8000/summary
+Authorization: token 8eb483d9d1c1d5ba4e55f1be90414877aaf2adf5
+Content-Type: application/json
