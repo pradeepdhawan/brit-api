@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh 
+
 echo "Creating Migrations..."
 python3 manage.py makemigrations items
 echo ====================================
