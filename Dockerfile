@@ -10,9 +10,12 @@ WORKDIR /app
 COPY requirements.txt .
 RUN python3 -m pip install -r requirements.txt
 
-RUN chmod +x django.sh
 # Bundle app source
 COPY . .
+
+COPY django.sh .
+
+RUN chmod +x /app/django.sh
 
 # Expose port
 EXPOSE 8000
