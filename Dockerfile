@@ -16,5 +16,7 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
+RUN chmod +x /app/django.sh
+
 # entrypoint to run the django.sh file
 ENTRYPOINT ["/app/django.sh"]
