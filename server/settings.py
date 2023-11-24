@@ -37,6 +37,7 @@ ALLOWED_METHODS = [
 ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
     'http://localhost',
     'http://127.0.0.1',
     'http://0.0.0.0',
@@ -44,6 +45,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_CREDENTIALS = True
 # Application definition
+CORS_ALLOWED_HEADERS = ['Content-Type', 'Authorization']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -55,6 +57,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
+    "rest_framework_swagger",
+    "drf_yasg",
     "items"
 ]
 

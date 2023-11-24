@@ -31,7 +31,7 @@ def summary(request):
 
     count_of_items = Item.objects.count()
 
-    return Response(f"There are {count_of_items} items in the basket with a total cost of {total_cost:.2f}")
+    return Response(f"There are {count_of_items} items in the basket with a total cost of £ {total_cost:.2f}")
 
 @api_view(["POST"])
 @authentication_classes([SessionAuthentication, TokenAuthentication])

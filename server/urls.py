@@ -18,13 +18,12 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 
 from server import views
-from items import views as item_views
 
 urlpatterns = [
+    re_path("user", views.user),
     re_path("login", views.login),
+    re_path("logout", views.logout), 
     re_path("signup", views.signup),
     re_path("validate_token", views.validate_token),
-    re_path("items",item_views.items),
-    re_path("add",item_views.add),
-    re_path("summary",item_views.summary),
+    re_path("", include("items.urls")),
 ]
